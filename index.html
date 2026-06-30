@@ -5,29 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club de Moot Court UMU</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Iconos institucionales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- BOTÓN FLOTANTE: RECONOCIMIENTO CRAU -->
-    <div class="crau-floating">
+    <div class="crau-floating" onclick="openModal('modal-crau')">
         <i class="fa-solid fa-graduation-cap"></i> Reconocimiento CRAU
-        <div class="crau-tooltip">
-            <h3>Reconocimiento académico y CRAU</h3>
-            <p>El Club podrá solicitar, si la normativa universitaria lo permite, el reconocimiento de créditos CRAU por participación continuada y acreditada en actividades formativas, preparación de equipos, organización del Moot Interno o participación en competiciones externas.</p>
-            <p>Este reconocimiento estará siempre sujeto a la normativa aplicable de la Universidad de Murcia y a la aprobación de los órganos competentes.</p>
-        </div>
     </div>
 
-    <!-- CABECERA PRINCIPAL -->
     <header class="main-header">
         <div class="header-top">
             <h1 class="club-title">CLUB DE MOOT COURT UMU</h1>
             <p class="faculty-sub">Facultad de Derecho • Universidad de Murcia</p>
         </div>
         
-        <!-- PESTAÑAS DE NAVEGACIÓN PRINCIPAL -->
         <nav class="nav-tabs">
             <button class="tab-btn active" onclick="switchTab('inicio')"><i class="fa-solid fa-house"></i> Inicio</button>
             <button class="tab-btn" onclick="switchTab('que-hacemos')"><i class="fa-solid fa-gavel"></i> ¿Qué hacemos?</button>
@@ -37,12 +28,9 @@
         </nav>
     </header>
 
-    <!-- CONTENEDOR PRINCIPAL DE CONTENIDO -->
     <main class="content-container">
 
-        <!-- ================= SECCIÓN INICIO ================= -->
         <section id="inicio" class="tab-content active">
-            <!-- Héroe Principal con Foto Difuminada de Fondo -->
             <div class="hero-section">
                 <div class="hero-overlay"></div>
                 <div class="hero-inner">
@@ -52,7 +40,6 @@
                 </div>
             </div>
 
-            <!-- Información Inferior de la Página Principal -->
             <div class="grid-info">
                 <div class="info-card">
                     <div class="card-icon"><i class="fa-solid fa-book-bookmark"></i></div>
@@ -80,7 +67,6 @@
             </div>
         </section>
 
-        <!-- ================= SECCIÓN QUÉ HACEMOS ================= -->
         <section id="que-hacemos" class="tab-content">
             <h2 class="section-title">Funciones Principales del Club</h2>
             <div class="functions-grid">
@@ -102,7 +88,6 @@
             </div>
         </section>
 
-        <!-- ================= SECCIÓN PARA QUÉ SERVE ================= -->
         <section id="para-que-sirve" class="tab-content">
             <h2 class="section-title">¿Para qué sirve el Mooting?</h2>
             <div class="text-block">
@@ -124,7 +109,6 @@
             </blockquote>
         </section>
 
-        <!-- ================= SECCIÓN OBJETIVOS ================= -->
         <section id="objetivos" class="tab-content">
             <h2 class="section-title">Objetivos Principales del Club</h2>
             <div class="objectives-list">
@@ -141,17 +125,16 @@
             </div>
         </section>
 
-        <!-- ================= SECCIÓN QUIÉNES SOMOS ================= -->
         <section id="quienes-somos" class="tab-content">
             <h2 class="section-title">Estructura Organizativa del Club</h2>
             
             <div class="org-section">
-                <h3>Asamblea de miembros</h3>
+                <h3>7.1. Asamblea de miembros</h3>
                 <p>Formada por los miembros activos del Club. Será el espacio ordinario de deliberación, propuesta y seguimiento de actividades para evaluar el funcionamiento y aprobar líneas de trabajo.</p>
             </div>
 
             <div class="org-section">
-                <h3>Junta de coordinación estudiantil (Elegida anualmente)</h3>
+                <h3>7.2. Junta de coordinación estudiantil (Elegida anualmente)</h3>
                 <div class="roles-grid">
                     <div class="role-card">
                         <h4>Presidencia</h4>
@@ -198,7 +181,7 @@
             </div>
 
             <div class="org-section">
-                <h3>Profesor tutor o profesora tutora</h3>
+                <h3>8. Profesor tutor o profesora tutora</h3>
                 <p>Contará con la supervisión académica general de un docente de la Facultad de Derecho para velar por la continuidad institucional, orientar el programa formativo y facilitar la inserción del proyecto en la Facultad.</p>
             </div>
 
@@ -210,9 +193,6 @@
 
     </main>
 
-    <!-- ========================================================
-         MODAL INTERACTIVO: CONTENIDO DE "PARTICIPA" Y PÁGINA INTERNA
-         ======================================================== -->
     <div id="modal-participa" class="modal">
         <div class="modal-content">
             <header class="modal-header-nav">
@@ -220,7 +200,6 @@
                 <button class="close-modal-btn" onclick="closeModal('modal-participa')">&times;</button>
             </header>
             
-            <!-- Sub-botones/Navegación interna solicitada -->
             <div class="modal-subnav">
                 <button class="sub-tab-btn active" onclick="switchSubTab('admision')">Miembros y Admisión</button>
                 <button class="sub-tab-btn" onclick="switchSubTab('programa')">Programa Anual</button>
@@ -230,7 +209,6 @@
 
             <div class="modal-body-content">
                 
-                <!-- Sub-pestaña: Admisión -->
                 <div id="sub-admision" class="sub-tab-content active">
                     <h3>Miembros, admisión y participación</h3>
                     <p>Podrán formar parte del Club estudiantes de la Facultad de Derecho de la Universidad de Murcia y, en su caso, estudiantes de dobles grados, másteres u otros programas jurídicos vinculados a la Facultad.</p>
@@ -243,13 +221,14 @@
                             <li>Prueba de argumentación o análisis jurídico (si fuera necesario por aforo).</li>
                         </ul>
                     </div>
-                    <p class="warning-note">⚠️ La pertenencia al Club no implicará automáticamente la selección para representar a la Facultad en competiciones externas. Los equipos se elegirán mediante criterios transparentes, objetivos y sujetos a aprobación institucional.</p>
+                    <div class="warning-note">
+                        <i class="fa-solid fa-triangle-exclamation"></i> La pertenencia al Club no implicará automáticamente la selección para representar a la Facultad en competiciones externas. Los equipos se elegirán mediante criterios transparentes, objetivos y sujetos a aprobación institucional.
+                    </div>
                 </div>
 
-                <!-- Sub-pestaña: Programa Anual -->
                 <div id="sub-programa" class="sub-tab-content">
                     <h3>Programa Anual de Actividades</h3>
-                    <p>El programa se divide estructuralmente en dos fases claves a lo que largo del curso académico:</p>
+                    <p>El programa se divide estructuralmente en dos fases claves a lo largo del curso académico:</p>
                     
                     <div class="phases-container">
                         <div class="phase-box">
@@ -281,14 +260,12 @@
                     </div>
                 </div>
 
-                <!-- Sub-pestaña: Moot Interno -->
                 <div id="sub-moot-interno" class="sub-tab-content">
                     <h3>Moot Court Interno de la Facultad</h3>
                     <p>El Moot Court Interno será la <strong>actividad anual central del Club</strong>. Su finalidad será ofrecer a los estudiantes una experiencia completa de litigación simulada y servir como espacio de entrenamiento, evaluación y visibilidad.</p>
                     <p>El Moot Interno se regirá por un reglamento básico, incluido como Anexo I a esta propuesta, que podrá ser desarrollado o adaptado en cada edición mediante convocatoria anual.</p>
                 </div>
 
-                <!-- Sub-pestaña: Competiciones -->
                 <div id="sub-competiciones" class="sub-tab-content">
                     <h3>Competiciones Externas</h3>
                     <p>El Club apoyará la preparación de estudiantes para competiciones externas de manera progresiva y realista, clasificando metas en base a exigencia:</p>
@@ -308,9 +285,8 @@
                         </div>
                     </div>
 
-                    <!-- Botón Destacado de Selección Solicitado -->
                     <div class="selection-box">
-                        <button class="btn-toggle-info" onclick="toggleSelectionInfo()"><i class="fa-solid fa-circle-question"></i> ¿Cómo me seleccionan? (Haga clic aquí)</button>
+                        <button class="btn-toggle-info" onclick="toggleSelectionInfo()"><i class="fa-solid fa-circle-question"></i> ¿Cómo me seleccionan? (Haz clic aquí)</button>
                         <div id="selection-info-content" class="hidden-info">
                             <h4>Selección de equipos para competiciones externas</h4>
                             <p>La selección se regirá por criterios transparentes y objetivos. Se valorará:</p>
@@ -328,9 +304,29 @@
         </div>
     </div>
 
-    <!-- SCRIPT DE INTERACTIVIDAD -->
+    <div id="modal-crau" class="modal">
+        <div class="modal-content modal-content-small">
+            <header class="modal-header-nav">
+                <h2>Reconocimiento Académico y CRAU</h2>
+                <button class="close-modal-btn" onclick="closeModal('modal-crau')">&times;</button>
+            </header>
+            <div class="modal-body-content">
+                <p style="font-size: 1.05rem; margin-bottom: 15px;">El Club podrá solicitar, si la normativa universitaria lo permite, el reconocimiento de créditos CRAU por la participación continuada y acreditada en:</p>
+                <ul class="benefit-list" style="margin-bottom: 15px;">
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--ue-blue); margin-top:4px;"></i> Actividades formativas periódicas.</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--ue-blue); margin-top:4px;"></i> Preparación y entrenamiento de equipos.</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--ue-blue); margin-top:4px;"></i> Organización activa del Moot Interno.</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: var(--ue-blue); margin-top:4px;"></i> Participación en competiciones externas.</li>
+                </ul>
+                <div class="warning-note" style="background-color: #E2E8F0; color: var(--text-dark); border-left: 4px solid var(--ue-blue);">
+                    <i class="fa-solid fa-circle-info" style="color: var(--ue-blue)"></i> Este reconocimiento estará siempre sujeto a la normativa aplicable de la Universidad de Murcia y a la aprobación de los órganos competentes.
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Cambiar pestañas principales
+        // Cambiar pestañas principales del portal
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
             document.querySelectorAll('.nav-tabs .tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -339,17 +335,17 @@
             event.currentTarget.classList.add('active');
         }
 
-        // Abrir Modal de Participa
+        // Abrir ventanas modales emergentes
         function openModal(modalId) {
             document.getElementById(modalId).style.display = "flex";
         }
 
-        // Cerrar Modal
+        // Cerrar ventanas modales emergentes
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
         }
 
-        // Cambiar sub-pestañas dentro del modal
+        // Cambiar sub-pestañas internas dentro de la ventana de Participa
         function switchSubTab(subTabId) {
             document.querySelectorAll('.sub-tab-content').forEach(content => content.classList.remove('active'));
             document.querySelectorAll('.modal-subnav .sub-tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -358,7 +354,7 @@
             event.currentTarget.classList.add('active');
         }
 
-        // Mostrar/Ocultar información de selección
+        // Desplegar u ocultar la información de criterios de selección
         function toggleSelectionInfo() {
             var content = document.getElementById('selection-info-content');
             if (content.style.display === "block") {
@@ -368,11 +364,10 @@
             }
         }
 
-        // Cerrar modal si se hace clic fuera del recuadro blanco
+        // Cerrar modales automáticamente si el usuario hace clic fuera de la zona blanca
         window.onclick = function(event) {
-            var modal = document.getElementById('modal-participa');
-            if (event.target == modal) {
-                modal.style.display = "none";
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
             }
         }
     </script>
